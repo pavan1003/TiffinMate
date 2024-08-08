@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TiffinMate</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <header id="header" class="content-wrapper">
+    <div id="site-title">
+      <a id="site-name" href="#">
+        TiffinMate
+      </a>
+      <img id="site-logo" src="./assets/images/logo.png" alt="TiffinMate logo" width="30">
+    </div>
+    <div>
+      <button id="info" class="btn">&#9432;</button>
+    </div>
+  </header>
+  <main>
+    <div class="content-wrapper ">
+      <div id="tiffin-form">
+        <div id="input-wrapper">
+          <div class="input-group">
+            <div class="form-input">
+              <label class="form-label" for="tiffins">Number of Tiffins to prepare:</label>
+              <input class="input-box" type="number" id="tiffins">
+            </div>
+            <span id="error-tiffins"></span>
+          </div>
+          <div class="input-group">
+            <div class="form-input">
+              <label class="form-label" for="tiffinItems">Number of Items to be given per Tiffin:</label>
+              <input class="input-box" type="number" id="tiffinItems">
+            </div>
+            <span id="error-items"></span>
+          </div>
+          <button id="btn-add-items" class="btn">Add Items</button>
+          <div class="form-input-group" id="items"></div>
+          <button id="btn-generate" class="btn hidden">Generate Report</button>
+        </div>
+        <div id="report-wrapper">
+          <div id="output" class="hidden">
+          </div>
+          <div class="btn-group">
+            <button id="btn-print" class="btn hidden">Print</button>
+            <button id="btn-generate-new" class="btn hidden">Generate Another Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Information card -->
+    <div id="info-card">
+      <div class="info-content">
+        <span class="close">&times;</span>
+        <h2>Welcome to TiffinMate!</h2>
+        <p>Tiffin is a South Asian English word for a type of meal. It refers to a light breakfast or a light tea-time
+          meal.</p>
+        <p>TiffinMate is your go-to solution for simplifying meal planning and ingredient estimation for your tiffin
+          service. Whether you're a seasoned tiffin provider or just starting out, TiffinMate has all the tools you need
+          to streamline your operations and delight your customers.</p>
+        <h3>Getting Started:</h3>
+        <ol>
+          <li>
+            <Strong>Input Number of Tiffins:</Strong>
+            <p>Begin by entering the number of tiffins you need to prepare for the day. Simply type the quantity into
+              the designated field and hit enter.</p>
+          </li>
+          <li>
+            <Strong>Select Items for Each Tiffin:</Strong>
+            <p>Next, specify the items you want to include in each tiffin. Choose from our curated list of delicious
+              dishes to create the perfect menu for your customers.</p>
+          </li>
+        </ol>
+
+        <h3>Key Features:</h3>
+        <ul>
+          <li>
+            <Strong>Customize Portion Sizes:</Strong>
+            <p>Tailor each tiffin to your customers' preferences by selecting the container size or quantity of each
+              item per tiffin. With flexible options, you can easily adjust serving sizes to meet varying dietary
+              needs.</p>
+          </li>
+          <li>
+            <Strong>Calculate Total Ingredients:</Strong>
+            <p>TiffinMate automatically calculates the total quantity of each food item needed based on the number of
+              tiffins you've specified. Say goodbye to guesswork and hello to precise ingredient estimation.</p>
+          </li>
+          <li>
+            <Strong>Generate Printable Reports:</Strong>
+            <p>Need to share your menu plan with clients or keep a record for yourself? TiffinMate offers export
+              functionality, allowing you to generate printable reports with just a click of a button.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer" class="content-wrapper">
+    <p>© Copyright Tiffin Mate | Pavan Mistry, 2024. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

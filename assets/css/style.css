@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*************************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL/DEFAULT STYLES
+ * 2. HEADER
+ * -- 2a. Site name and logo
+ * -- 2b. Info button
+ * 3. MAIN
+ * -- 3a. Report
+ * -- 3b. Info card
+ * 4. FOOTER
+ * 5. ANIMATIONS
+
+ *************************************************************/
+
+/* 1. GENERAL/DEFAULT STYLES */
+
+:root {
+  --primary-color: #2D6DFF;
+  --accent-color: #4CAF50;
+  --secondary-color: #F49B23;
+  --target: 150px
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 400 20px/normal "Nunito Sans", sans-serif;
+  margin: 0;
+  background-color: #E1EBED;
+}
+
+main {
+  margin: 20px 0;
+  min-height: calc(100vh - 173.6px);
+}
+
+h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 0px;
+}
+
+.content-wrapper {
+  padding: 0 95px 0 96px;
+}
+
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn {
+  border-radius: 10px;
+  padding: 8px 16px;
+  color: white;
+  background-color: var(--accent-color);
+  box-shadow: 3px 5px 0px -2px black;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #3c8a3e;
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn:focus {
+  border: 2px solid white !important;
+}
+
+/* 2. HEADER */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 15px 5px;
+}
+
+#header a {
+  font-weight: 700;
+}
+
+#header>div {
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  justify-content: center;
+  height: 50px;
+}
+
+/* -- 2a. Site name and logo */
+
+#site-name {
+  font-family: "Jersey 10", sans-serif;
+  padding-right: 10px;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+#site-logo {
+  width: 50px;
+}
+
+/* -- 2b. Info button */
+#info {
+  transition: all 0.3s ease-in-out;
+}
+
+#info {
+  width: 60px;
+  background-color: var(--secondary-color);
+  height: 60px;
+  border-radius: 50px;
+  font-size: 26px;
+}
+
+#info:hover {
+  background-color: #d3851f;
+}
+
+/* 3. MAIN */
+
+.input-group:nth-child(2) {
+  margin-top: 20px;
+}
+
+#tiffin-form .input-box {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#tiffin-form .form-input-group {
+  margin-top: 20px;
+}
+
+#tiffin-form .selection {
+  font-size: 18px;
+  display: flex;
+  margin: 20px 0 20px 20px;
+  gap: 25px;
+}
+
+/* -- 3a. Report */
+
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin: 10px auto;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #output, #output * {
+    visibility: visible;
+  }
+
+  #output {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* -- 3b. Info card */
+#info-card {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#info-card .info-content {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: #fefefe;
+  font-size: 16px;
+  margin: auto;
+  overflow: auto;
+  height: 80%;
+  padding: 20px;
+  width: 80%;
+}
+
+#info-card p {
+  margin: 0;
+}
+
+#info-card h2 {
+  color: var(--secondary-color);
+}
+
+#info-card .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#info-card .close:hover,
+#info-card .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 4. FOOTER */
+#footer {
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  color: #FFF;
+  background-color: var(--primary-color);
+  position: relative;
+  bottom: 0;
+}
+
+/* 5. ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
